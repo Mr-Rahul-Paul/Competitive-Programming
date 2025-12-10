@@ -1,0 +1,47 @@
+use std::io::{self, BufRead};
+
+const MOD: i64 = 1000000007;
+
+use std::io;
+
+macro_rules! input {
+    () => {{
+        let mut s = String::new();
+        io::stdin().read_line(&mut s).unwrap();
+        s.trim().to_string()
+    }};
+
+    (int) => {{
+        input!().parse::<i64>().unwrap()
+    }};
+
+    (bool) => {{
+        input!().parse::<bool>().unwrap()
+    }};
+}
+
+fn main() {
+    let s = input!();
+    let n = input!(int);
+    let b = input!(bool); // Reads a line, parses as bool (true/false)
+    let vec = Vec![int]; // Reads a line, splits by whitespace, parses as Vec<i64>
+}
+
+fn solve() {
+    // Read single number: let n = input!(int);
+    // Read multiple numbers: let arr = input!(ints);
+
+    let n = input!(int);
+    let arr = input!(ints);
+
+    println!("{} {:?}", n, arr);
+}
+
+fn main() {
+    let tc = input!(int);
+
+    for _ in 0..tc {
+        solve();
+        println!();
+    }
+}
