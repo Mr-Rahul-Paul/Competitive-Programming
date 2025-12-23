@@ -1,0 +1,45 @@
+#include <bits/stdc++.h> // For atoll (ASCII to long long)
+#define strtoint(x) atoll(x.c_str())
+#define inttostr(x) to_string(x);
+#define inttobi(n) bitset<64>(n).to_string()
+#define bitoint(x) a(x);
+#define int long long
+#define MOD 1000000007;
+
+using namespace std;
+
+void solve()
+{
+    int n;
+    cin >> n;
+    int count = 0;
+    // just get the interval where n is multiple of the intervals 
+    for (int i = 1; i < n + 1; i++)
+    {
+        if (n % i == 0)
+        {
+            while (n % i == 0)
+            {
+                count++;
+                i++;
+            }
+            cout << count;
+            break;
+        }
+    }
+
+}
+
+signed main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    int tc;
+    cin >> tc;
+    while (tc--)
+    {
+        solve();
+        cout << endl;
+    }
+}
